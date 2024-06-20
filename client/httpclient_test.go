@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/open-telemetry/opamp-go/client/internal"
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/internal"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 func TestHTTPPolling(t *testing.T) {

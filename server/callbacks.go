@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/open-telemetry/opamp-go/protobufs"
-	"github.com/open-telemetry/opamp-go/server/types"
+	"github.com/supersun/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/server/types"
 )
 
 // CallbacksStruct is a struct that implements Callbacks interface and allows

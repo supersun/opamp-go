@@ -20,7 +20,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 func CreateClientTLSConfig(clientCert *tls.Certificate, caCertPath string) (*tls.Config, error) {

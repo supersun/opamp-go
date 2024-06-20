@@ -4,9 +4,9 @@ import (
 	"log"
 	"sync"
 
-	"github.com/open-telemetry/opamp-go/protobufs"
-	"github.com/open-telemetry/opamp-go/protobufshelpers"
-	"github.com/open-telemetry/opamp-go/server/types"
+	"github.com/supersun/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/protobufshelpers"
+	"github.com/supersun/opamp-go/server/types"
 )
 
 type Agents struct {

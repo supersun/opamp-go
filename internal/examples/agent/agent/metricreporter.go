@@ -19,8 +19,8 @@ import (
 	otelresource "go.opentelemetry.io/otel/sdk/resource"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // MetricReporter is a metric reporter that collects Agent metrics and sends them to an

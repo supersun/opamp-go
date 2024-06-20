@@ -3,7 +3,7 @@ package types
 import (
 	"context"
 
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // MessageData represents a message received from the server and handled by Callbacks.

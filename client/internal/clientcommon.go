@@ -8,8 +8,8 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 var (

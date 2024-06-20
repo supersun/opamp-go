@@ -5,8 +5,8 @@ import (
 	"errors"
 	"net"
 
-	"github.com/open-telemetry/opamp-go/protobufs"
-	"github.com/open-telemetry/opamp-go/server/types"
+	"github.com/supersun/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/server/types"
 )
 
 // ErrInvalidHTTPConnection represents an event of misuse function for plain HTTP

@@ -69,3 +69,30 @@ gomoddownload:
 .PHONY: install-tools
 install-tools:
 	cd $(TOOLS_MOD_DIR) && go install github.com/ory/go-acc
+
+add-upstream:
+	git remote add upstream https://github.com/open-telemetry/opamp-go.git
+
+fnm:
+	git fetch upstream
+	git merge upstream/main
+
+# Update import paths in the examples to point to the custompkg.
+update-import-paths:
+	rm go.sum
+	go clean -modcache
+	rm -rf $GOPATH/pkg/mod/github.com/supersun/opamp-go
+	rm -rf $GOPATH/pkg/mod/cache/download/github.com/supersun/opamp-go
+	go get -u ./...
+	go mod tidy
+
+	# Update import paths in Go source files
+	find . -type f -name "*.go" -exec sed -i '' 's|github.com/open-telemetry/opamp-go|github.com/supersun/opamp-go|g' {} +
+
+	# Update module paths in go.mod files
+	find . -type f -name "go.mod" -exec sed -i '' 's|module github.com/open-telemetry/opamp-go|module github.com/supersun/opamp-go|g' {} +
+
+	# Update require and replace directives in go.mod files
+	find . -type f -name "go.mod" -exec sed -i '' 's|require github.com/open-telemetry/opamp-go|require github.com/supersun/opamp-go|g' {} +
+	find . -type f -name "go.mod" -exec sed -i '' 's|replace github.com/open-telemetry/opamp-go|replace github.com/supersun/opamp-go|g' {} +
+

@@ -4,8 +4,8 @@ import (
 	"context"
 	"io"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // InMemPackagesStore is a package store used for testing. Keeps the packages in memory.

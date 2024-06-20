@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/open-telemetry/opamp-go/client/types"
+	"github.com/supersun/opamp-go/client/types"
 )
 
 var _ types.Logger = &Logger{}

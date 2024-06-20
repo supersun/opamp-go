@@ -16,10 +16,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/open-telemetry/opamp-go/client/internal"
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/internal/testhelpers"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/internal"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/internal/testhelpers"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 func TestDisconnectWSByServer(t *testing.T) {

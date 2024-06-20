@@ -3,8 +3,8 @@ package client
 import (
 	"context"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // OpAMPClient is an interface representing the client side of the OpAMP protocol.

@@ -13,10 +13,11 @@ import (
 	"github.com/gorilla/websocket"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/internal"
-	"github.com/open-telemetry/opamp-go/protobufs"
-	serverTypes "github.com/open-telemetry/opamp-go/server/types"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
+	serverTypes "github.com/supersun/opamp-go/server/types"
+
+	"github.com/supersun/opamp-go/internal"
 )
 
 var (
@@ -53,7 +54,10 @@ type innerHTTPHander struct {
 	httpHandlerFunc http.HandlerFunc
 }
 
-func (i innerHTTPHander) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
+func (i innerHTTPHander) ServeHTTP(
+	writer http.ResponseWriter,
+	request *http.Request,
+) {
 	i.httpHandlerFunc(writer, request)
 }
 
@@ -131,7 +135,10 @@ func (s *server) Start(settings StartSettings) error {
 	return err
 }
 
-func (s *server) startHttpServer(listenAddr string, serveFunc func(l net.Listener) error) error {
+func (s *server) startHttpServer(
+	listenAddr string,
+	serveFunc func(l net.Listener) error,
+) error {
 	// If the listen address is not specified use the default.
 	ln, err := net.Listen("tcp", listenAddr)
 	if err != nil {
@@ -167,7 +174,10 @@ func (s *server) Addr() net.Addr {
 	return s.addr
 }
 
-func (s *server) httpHandler(w http.ResponseWriter, req *http.Request) {
+func (s *server) httpHandler(
+	w http.ResponseWriter,
+	req *http.Request,
+) {
 	var connectionCallbacks serverTypes.ConnectionCallbacks
 	if s.settings.Callbacks != nil {
 		resp := s.settings.Callbacks.OnConnecting(req)
@@ -204,7 +214,11 @@ func (s *server) httpHandler(w http.ResponseWriter, req *http.Request) {
 	go s.handleWSConnection(req.Context(), conn, connectionCallbacks)
 }
 
-func (s *server) handleWSConnection(reqCtx context.Context, wsConn *websocket.Conn, connectionCallbacks serverTypes.ConnectionCallbacks) {
+func (s *server) handleWSConnection(
+	reqCtx context.Context,
+	wsConn *websocket.Conn,
+	connectionCallbacks serverTypes.ConnectionCallbacks,
+) {
 	agentConn := wsConnection{wsConn: wsConn, connMutex: &sync.Mutex{}}
 
 	defer func() {
@@ -310,7 +324,11 @@ func compressGzip(data []byte) ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-func (s *server) handlePlainHTTPRequest(req *http.Request, w http.ResponseWriter, connectionCallbacks serverTypes.ConnectionCallbacks) {
+func (s *server) handlePlainHTTPRequest(
+	req *http.Request,
+	w http.ResponseWriter,
+	connectionCallbacks serverTypes.ConnectionCallbacks,
+) {
 	bodyBytes, err := s.readReqBody(req)
 	if err != nil {
 		s.logger.Debugf(req.Context(), "Cannot read HTTP body: %v", err)

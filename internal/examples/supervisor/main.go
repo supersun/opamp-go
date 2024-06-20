@@ -6,7 +6,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/open-telemetry/opamp-go/internal/examples/supervisor/supervisor"
+	"github.com/supersun/opamp-go/internal/examples/supervisor/supervisor"
 )
 
 func main() {

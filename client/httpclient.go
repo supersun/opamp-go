@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/open-telemetry/opamp-go/client/internal"
-	"github.com/open-telemetry/opamp-go/client/types"
-	sharedinternal "github.com/open-telemetry/opamp-go/internal"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/internal"
+	"github.com/supersun/opamp-go/client/types"
+	sharedinternal "github.com/supersun/opamp-go/internal"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // httpClient is an OpAMP Client implementation for plain HTTP transport.

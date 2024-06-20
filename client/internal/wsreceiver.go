@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/gorilla/websocket"
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/internal"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/internal"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // wsReceiver implements the WebSocket client's receiving portion of OpAMP protocol.

@@ -16,7 +16,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 var logger = log.New(log.Default().Writer(), "[CertMan] ", log.Default().Flags()|log.Lmsgprefix|log.Lmicroseconds)

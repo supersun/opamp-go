@@ -3,8 +3,8 @@ package internal
 import (
 	"errors"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // Sender is an interface of the sending portion of OpAMP protocol that stores

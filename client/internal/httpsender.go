@@ -13,11 +13,11 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v4"
-	"github.com/open-telemetry/opamp-go/internal"
+	"github.com/supersun/opamp-go/internal"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 const OpAMPPlainHTTPMethod = "POST"

@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"net/http"
 
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // StartSettings defines the parameters for starting the OpAMP Client.

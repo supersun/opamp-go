@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/open-telemetry/opamp-go/client/types"
-	"github.com/open-telemetry/opamp-go/protobufs"
+	"github.com/supersun/opamp-go/client/types"
+	"github.com/supersun/opamp-go/protobufs"
 )
 
 // receivedProcessor handles the processing of messages received from the Server.
